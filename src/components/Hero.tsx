@@ -11,7 +11,7 @@ const Hero = () => {
 
   return (
     <div className="relative text-stone-600 flex flex-col min-h-screen w-full">
-      <div className="relative flex flex-col justify-center px-4 sm:px-10 md:px-20 w-full mx-auto flex-grow z-10 py-32">
+      <div className="relative flex flex-col justify-center px-4 sm:px-10 md:px-20 w-full max-w-7xl mx-auto flex-grow z-10 py-32">
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between w-full gap-10 lg:gap-20">
           
           {/* Left Section (Text) */}
@@ -37,7 +37,7 @@ const Hero = () => {
 
               {hovered && (
                 <motion.div
-                  className="absolute -inset-y-10 left-[50%] flex items-center justify-center"
+                  className="absolute -inset-y-4 left-[20%] flex items-center justify-center"
                   initial={{ opacity: 0, scale: 0 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0 }}

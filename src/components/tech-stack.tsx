@@ -57,7 +57,7 @@ const CodingStats = () => {
   }
 
   return (
-    <div className="relative w-full min-h-[400px] mt-8">
+    <div className="relative w-full min-h-[400px] my-8 sm:py-24 md:py-32 lg:py-40">
       {/* GitHub Contributions Card (Background) */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -70,7 +70,7 @@ const CodingStats = () => {
             <FaGithub className="text-2xl text-gray-800 dark:text-white" />
             <h3 className="text-xl font-bold text-gray-800 dark:text-white">GitHub Contributions</h3>
           </div>
-          <button className="text-blue-500 hover:text-blue-700 font-medium flex items-center gap-1">
+          <button className="text-blue-500 hover:text-blue-700 font-medium flex items-center gap-1 cursor-pointer">
             <span>View Profile</span>
           </button>
         </div>
@@ -118,21 +118,21 @@ const CodingStats = () => {
         </div>
 
         <div className="grid grid-cols-4 gap-4 mt-6">
-          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-            <p className="text-sm text-gray-600 dark:text-gray-400">Total Commits</p>
-            <p className="text-2xl font-bold text-gray-900 dark:text-white">1,248</p>
+          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg flex flex-col items-center justify-center">
+            <p className="text-xs text-gray-600 dark:text-gray-400 text-center">Total Commits</p>
+            <p className="text-xl font-bold text-gray-900 dark:text-white">1,248</p>
           </div>
-          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-            <p className="text-sm text-gray-600 dark:text-gray-400">Repositories</p>
-            <p className="text-2xl font-bold text-gray-900 dark:text-white">32</p>
+          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg flex flex-col items-center justify-center">
+            <p className="text-xs text-gray-600 dark:text-gray-400 text-center">Repositories</p>
+            <p className="text-xl font-bold text-gray-900 dark:text-white">32</p>
           </div>
-          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-            <p className="text-sm text-gray-600 dark:text-gray-400">Pull Requests</p>
-            <p className="text-2xl font-bold text-gray-900 dark:text-white">78</p>
+          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg flex flex-col items-center justify-center">
+            <p className="text-xs text-gray-600 dark:text-gray-400 text-center">Pull Requests</p>
+            <p className="text-xl font-bold text-gray-900 dark:text-white">78</p>
           </div>
-          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-            <p className="text-sm text-gray-600 dark:text-gray-400">Code Reviews</p>
-            <p className="text-2xl font-bold text-gray-900 dark:text-white">124</p>
+          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg flex flex-col items-center justify-center">
+            <p className="text-xs text-gray-600 dark:text-gray-400 text-center">Code Reviews</p>
+            <p className="text-xl font-bold text-gray-900 dark:text-white">124</p>
           </div>
         </div>
       </motion.div>
@@ -142,7 +142,7 @@ const CodingStats = () => {
         initial={{ opacity: 0, y: 40, x: 40 }}
         animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 180 : 40, x: isVisible ? 100 : 40 }}
         transition={{ duration: 0.7, delay: 0.2 }}
-        className="absolute top-0 right-0 w-[65%] bg-white dark:bg-gray-900 rounded-xl shadow-xl border border-gray-200 dark:border-gray-800 p-5 z-20"
+        className="absolute top-10 lg:right-0 md:right-0 right-[20%] w-[75%] bg-white dark:bg-gray-900 rounded-xl shadow-xl border border-gray-200 dark:border-gray-800 p-5 z-20"
       >
         <div className="flex justify-between items-center mb-4">
           <div className="flex items-center gap-2">
@@ -226,7 +226,7 @@ const CodingStats = () => {
             </div>
           </div>
 
-          <div className="w-[40%]">
+          <div className="w-[40%] ">
             <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Recent Problems</h4>
             <div className="space-y-2">
               {leetcodeStats.recentProblems.map((problem, index) => (
