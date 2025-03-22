@@ -57,32 +57,32 @@ const CodingStats = () => {
   }
 
   return (
-    <div className="relative w-full min-h-[400px] my-8 sm:py-24 md:py-32 lg:py-40">
+    <div className="relative w-full min-h-[500px] my-8 py-6 sm:py-12 md:py-16 lg:py-24">
       {/* GitHub Contributions Card (Background) */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
         transition={{ duration: 0.5 }}
-        className="absolute top-0 left-0 w-[90%] bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-gray-200 dark:border-gray-800 p-5 z-10"
+        className="absolute top-0 left-0 w-full sm:w-4/5 md:w-3/4 lg:w-4/5 h-auto bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-gray-200 dark:border-gray-800 p-3 sm:p-4 md:p-5 z-10"
       >
-        <div className="flex justify-between items-center mb-4">
-          <div className="flex items-center gap-2">
-            <FaGithub className="text-2xl text-gray-800 dark:text-white" />
-            <h3 className="text-xl font-bold text-gray-800 dark:text-white">GitHub Contributions</h3>
+        <div className="flex justify-between items-center mb-2 sm:mb-4">
+          <div className="flex items-center gap-1 sm:gap-2">
+            <FaGithub className="text-lg sm:text-xl md:text-2xl text-gray-800 dark:text-white" />
+            <h3 className="text-xs sm:text-sm md:text-md lg:text-lg font-bold text-gray-800 dark:text-white">GitHub Contributions</h3>
           </div>
           <button className="text-blue-500 hover:text-blue-700 font-medium flex items-center gap-1 cursor-pointer">
-            <span>View Profile</span>
+            <span className="text-xs sm:text-sm">View Profile</span>
           </button>
         </div>
 
-        <div className="mb-4">
-          <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400 mb-2">
+        <div className="mb-3 sm:mb-4">
+          <div className="flex items-center justify-between text-xs text-gray-600 dark:text-gray-400 mb-2">
             <span>Less</span>
             <div className="flex gap-1">
-              <div className="w-3 h-3 rounded-sm bg-gray-100 dark:bg-gray-800"></div>
-              <div className="w-3 h-3 rounded-sm bg-green-200 dark:bg-green-900"></div>
-              <div className="w-3 h-3 rounded-sm bg-green-400 dark:bg-green-700"></div>
-              <div className="w-3 h-3 rounded-sm bg-green-600 dark:bg-green-500"></div>
+              <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-sm bg-gray-100 dark:bg-gray-800"></div>
+              <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-sm bg-green-200 dark:bg-green-900"></div>
+              <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-sm bg-green-400 dark:bg-green-700"></div>
+              <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-sm bg-green-600 dark:bg-green-500"></div>
             </div>
             <span>More</span>
           </div>
@@ -93,7 +93,7 @@ const CodingStats = () => {
                 {week.map((day, dayIndex) => (
                   <div
                     key={`${weekIndex}-${dayIndex}`}
-                    className={`w-3 h-3 rounded-sm ${getContributionColor(day)} hover:ring-2 hover:ring-gray-400 transition-all`}
+                    className={`w-2 h-2 sm:w-3 sm:h-3 rounded-sm ${getContributionColor(day)} hover:ring-2 hover:ring-gray-400 transition-all`}
                     title={`${day} contributions`}
                   ></div>
                 ))}
@@ -101,88 +101,92 @@ const CodingStats = () => {
             ))}
           </div>
 
-          <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-2">
-            <span>Jan</span>
-            <span>Feb</span>
-            <span>Mar</span>
-            <span>Apr</span>
-            <span>May</span>
-            <span>Jun</span>
-            <span>Jul</span>
-            <span>Aug</span>
-            <span>Sep</span>
-            <span>Oct</span>
-            <span>Nov</span>
-            <span>Dec</span>
+          <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-2 overflow-x-auto">
+            <span className="text-[8px] sm:text-xs">Jan</span>
+            <span className="text-[8px] sm:text-xs">Feb</span>
+            <span className="text-[8px] sm:text-xs">Mar</span>
+            <span className="text-[8px] sm:text-xs">Apr</span>
+            <span className="text-[8px] sm:text-xs">May</span>
+            <span className="text-[8px] sm:text-xs">Jun</span>
+            <span className="text-[8px] sm:text-xs">Jul</span>
+            <span className="text-[8px] sm:text-xs">Aug</span>
+            <span className="text-[8px] sm:text-xs">Sep</span>
+            <span className="text-[8px] sm:text-xs">Oct</span>
+            <span className="text-[8px] sm:text-xs">Nov</span>
+            <span className="text-[8px] sm:text-xs">Dec</span>
           </div>
         </div>
 
-        <div className="grid grid-cols-4 gap-4 mt-6">
-          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg flex flex-col items-center justify-center">
-            <p className="text-xs text-gray-600 dark:text-gray-400 text-center">Total Commits</p>
-            <p className="text-xl font-bold text-gray-900 dark:text-white">1,248</p>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 mt-3 sm:mt-6">
+          <div className="bg-gray-50 dark:bg-gray-800 p-2 sm:p-3 rounded-lg flex flex-col items-center justify-center">
+            <p className="text-[10px] sm:text-xs text-gray-600 dark:text-gray-400 text-center">Total Commits</p>
+            <p className="text-sm sm:text-lg md:text-xl font-bold text-gray-900 dark:text-white">1,248</p>
           </div>
-          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg flex flex-col items-center justify-center">
-            <p className="text-xs text-gray-600 dark:text-gray-400 text-center">Repositories</p>
-            <p className="text-xl font-bold text-gray-900 dark:text-white">32</p>
+          <div className="bg-gray-50 dark:bg-gray-800 p-2 sm:p-3 rounded-lg flex flex-col items-center justify-center">
+            <p className="text-[10px] sm:text-xs text-gray-600 dark:text-gray-400 text-center">Repositories</p>
+            <p className="text-sm sm:text-lg md:text-xl font-bold text-gray-900 dark:text-white">32</p>
           </div>
-          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg flex flex-col items-center justify-center">
-            <p className="text-xs text-gray-600 dark:text-gray-400 text-center">Pull Requests</p>
-            <p className="text-xl font-bold text-gray-900 dark:text-white">78</p>
+          <div className="bg-gray-50 dark:bg-gray-800 p-2 sm:p-3 rounded-lg flex flex-col items-center justify-center">
+            <p className="text-[10px] sm:text-xs text-gray-600 dark:text-gray-400 text-center">Pull Requests</p>
+            <p className="text-sm sm:text-lg md:text-xl font-bold text-gray-900 dark:text-white">78</p>
           </div>
-          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg flex flex-col items-center justify-center">
-            <p className="text-xs text-gray-600 dark:text-gray-400 text-center">Code Reviews</p>
-            <p className="text-xl font-bold text-gray-900 dark:text-white">124</p>
+          <div className="bg-gray-50 dark:bg-gray-800 p-2 sm:p-3 rounded-lg flex flex-col items-center justify-center">
+            <p className="text-[10px] sm:text-xs text-gray-600 dark:text-gray-400 text-center">Code Reviews</p>
+            <p className="text-sm sm:text-lg md:text-xl font-bold text-gray-900 dark:text-white">124</p>
           </div>
         </div>
       </motion.div>
 
       {/* LeetCode Stats Card (Foreground) */}
       <motion.div
-        initial={{ opacity: 0, y: 40, x: 40 }}
-        animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 180 : 40, x: isVisible ? 100 : 40 }}
+        initial={{ opacity: 0, y: 40, x: 20 }}
+        animate={{ 
+          opacity: isVisible ? 1 : 0, 
+          y: isVisible ? [null, 150, 130] : 40,
+          x: isVisible ? [null, 30, 20] : 20 
+        }}
         transition={{ duration: 0.7, delay: 0.2 }}
-        className="absolute top-10 lg:right-0 md:right-0 right-[20%] w-[75%] bg-white dark:bg-gray-900 rounded-xl shadow-xl border border-gray-200 dark:border-gray-800 p-5 z-20"
+        className="absolute top-0 right-0 w-full sm:w-4/5 md:w-3/5 mt-48 sm:mt-40 md:mt-36 lg:mt-32 sm:ml-auto bg-white dark:bg-gray-900 rounded-xl shadow-xl border border-gray-200 dark:border-gray-800 p-3 sm:p-4 md:p-5 z-20"
       >
-        <div className="flex justify-between items-center mb-4">
-          <div className="flex items-center gap-2">
-            <FaCode className="text-2xl text-orange-500" />
-            <h3 className="text-xl font-bold text-gray-800 dark:text-white">LeetCode Stats</h3>
+        <div className="flex justify-between items-center mb-2 sm:mb-4">
+          <div className="flex items-center gap-1 sm:gap-2">
+            <FaCode className="text-lg sm:text-xl md:text-2xl text-orange-500" />
+            <h3 className="text-sm sm:text-md md:text-lg lg:text-xl font-bold text-gray-800 dark:text-white">LeetCode Stats</h3>
           </div>
-          <div className="flex items-center gap-2">
-            <FaTrophy className="text-yellow-500" />
-            <span className="text-gray-700 dark:text-gray-300">Rank: {leetcodeStats.ranking}</span>
+          <div className="flex items-center gap-1 sm:gap-2">
+            <FaTrophy className="text-yellow-500 text-sm sm:text-base" />
+            <span className="text-xs sm:text-sm text-gray-700 dark:text-gray-300">Rank: {leetcodeStats.ranking}</span>
           </div>
         </div>
 
-        <div className="flex gap-6 mb-6">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 mb-3 sm:mb-6">
           <div className="flex-1">
             <div className="flex justify-between mb-1">
-              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Problems Solved</span>
-              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+              <span className="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">Problems Solved</span>
+              <span className="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">
                 {leetcodeStats.solved}/{leetcodeStats.total}
               </span>
             </div>
-            <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mb-4">
+            <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 sm:h-2.5 mb-3 sm:mb-4">
               <motion.div
-                className="bg-blue-600 h-2.5 rounded-full"
+                className="bg-blue-600 h-1.5 sm:h-2.5 rounded-full"
                 initial={{ width: 0 }}
                 animate={{ width: isVisible ? `${(leetcodeStats.solved / leetcodeStats.total) * 100}%` : 0 }}
                 transition={{ duration: 1, delay: 0.5 }}
               />
             </div>
 
-            <div className="space-y-3">
+            <div className="space-y-2 sm:space-y-3">
               <div>
                 <div className="flex justify-between mb-1">
-                  <span className="text-sm font-medium text-green-500">Easy</span>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                  <span className="text-xs sm:text-sm font-medium text-green-500">Easy</span>
+                  <span className="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">
                     {leetcodeStats.easy.solved}/{leetcodeStats.easy.total}
                   </span>
                 </div>
-                <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1 sm:h-2">
                   <motion.div
-                    className="bg-green-500 h-2 rounded-full"
+                    className="bg-green-500 h-1 sm:h-2 rounded-full"
                     initial={{ width: 0 }}
                     animate={{ width: isVisible ? `${leetcodeStats.easy.percentage}%` : 0 }}
                     transition={{ duration: 1, delay: 0.6 }}
@@ -192,14 +196,14 @@ const CodingStats = () => {
 
               <div>
                 <div className="flex justify-between mb-1">
-                  <span className="text-sm font-medium text-yellow-500">Medium</span>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                  <span className="text-xs sm:text-sm font-medium text-yellow-500">Medium</span>
+                  <span className="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">
                     {leetcodeStats.medium.solved}/{leetcodeStats.medium.total}
                   </span>
                 </div>
-                <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1 sm:h-2">
                   <motion.div
-                    className="bg-yellow-500 h-2 rounded-full"
+                    className="bg-yellow-500 h-1 sm:h-2 rounded-full"
                     initial={{ width: 0 }}
                     animate={{ width: isVisible ? `${leetcodeStats.medium.percentage}%` : 0 }}
                     transition={{ duration: 1, delay: 0.7 }}
@@ -209,14 +213,14 @@ const CodingStats = () => {
 
               <div>
                 <div className="flex justify-between mb-1">
-                  <span className="text-sm font-medium text-red-500">Hard</span>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                  <span className="text-xs sm:text-sm font-medium text-red-500">Hard</span>
+                  <span className="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">
                     {leetcodeStats.hard.solved}/{leetcodeStats.hard.total}
                   </span>
                 </div>
-                <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1 sm:h-2">
                   <motion.div
-                    className="bg-red-500 h-2 rounded-full"
+                    className="bg-red-500 h-1 sm:h-2 rounded-full"
                     initial={{ width: 0 }}
                     animate={{ width: isVisible ? `${leetcodeStats.hard.percentage}%` : 0 }}
                     transition={{ duration: 1, delay: 0.8 }}
@@ -226,22 +230,22 @@ const CodingStats = () => {
             </div>
           </div>
 
-          <div className="w-[40%] ">
-            <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Recent Problems</h4>
-            <div className="space-y-2">
+          <div className="w-full sm:w-2/5 mt-3 sm:mt-0">
+            <h4 className="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 sm:mb-2">Recent Problems</h4>
+            <div className="space-y-1 sm:space-y-2">
               {leetcodeStats.recentProblems.map((problem, index) => (
-                <div key={index} className="flex items-center justify-between text-sm">
-                  <span className="truncate">{problem.name}</span>
+                <div key={index} className="flex items-center justify-between text-xs sm:text-sm">
+                  <span className="truncate max-w-32 sm:max-w-full">{problem.name}</span>
                   <span className={getDifficultyColor(problem.difficulty)}>{problem.difficulty}</span>
                 </div>
               ))}
             </div>
-            <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+            <div className="mt-2 sm:mt-4 pt-2 sm:pt-4 border-t border-gray-200 dark:border-gray-700">
               <div className="flex justify-between items-center">
-                <span className="text-sm text-gray-600 dark:text-gray-400">Daily Streak</span>
+                <span className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Daily Streak</span>
                 <div className="flex items-center gap-1">
-                  <FaChartLine className="text-green-500" />
-                  <span className="font-medium">12 days</span>
+                  <FaChartLine className="text-green-500 text-xs sm:text-sm" />
+                  <span className="text-xs sm:text-sm font-medium">12 days</span>
                 </div>
               </div>
             </div>
@@ -253,4 +257,3 @@ const CodingStats = () => {
 }
 
 export default CodingStats
-
