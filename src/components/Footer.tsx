@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { SiGithub } from "react-icons/si";
 import { SiLinkedin } from "react-icons/si";
 import { FaSquareXTwitter } from "react-icons/fa6";
@@ -26,9 +27,9 @@ const Footer = () => {
           >
           Contact Me
         </button>
-        <SiGithub className="h-8 w-8"/>
-        <SiLinkedin className="h-8 w-8"/>
-        <FaSquareXTwitter className="h-8 w-8"/>
+        <Link href="https://github.com/rajeev12r" target="_blank"><SiGithub className="h-8 w-8"/></Link>
+        <Link href="https://www.linkedin.com/in/rajeev12r" target="_blank"><SiLinkedin className="h-8 w-8"/></Link>
+        <Link href="https://x.com/RajeevR16816742" target="_blank"><FaSquareXTwitter className="h-8 w-8"/></Link>
 
         </div>
       </div>

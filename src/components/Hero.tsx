@@ -45,7 +45,7 @@ const Hero = () => {
                 >
                   <div className="relative w-40 h-40">
                     <motion.a
-                      href="https://www.linkedin.com/in/yourprofile"
+                      href="https://www.linkedin.com/in/rajeev12r"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:scale-110 transition-all duration-300"
@@ -55,7 +55,7 @@ const Hero = () => {
                     </motion.a>
 
                     <motion.a
-                      href="https://github.com/yourgithub"
+                      href="https://github.com/rajeev12r"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="absolute top-1/3 left-2/3 transform -translate-x-1/2 -translate-y-1/2 p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:scale-110 transition-all duration-300"
@@ -65,7 +65,7 @@ const Hero = () => {
                     </motion.a>
 
                     <motion.a
-                      href="https://twitter.com/yourtwitter"
+                      href="https://x.com/RajeevR16816742"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="absolute bottom-0 left-2/3 transform -translate-x-1/2 -translate-y-1/2 p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:scale-110 transition-all duration-300"

@@ -1,5 +1,5 @@
 "use client"
-
+import Link from "next/link"
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { FaGithub, FaCode, FaTrophy, FaChartLine } from "react-icons/fa"
@@ -71,7 +71,7 @@ const CodingStats = () => {
             <h3 className="text-xs sm:text-sm md:text-md lg:text-lg font-bold text-gray-800 dark:text-white">GitHub Contributions</h3>
           </div>
           <button className="text-blue-500 hover:text-blue-700 font-medium flex items-center gap-1 cursor-pointer">
-            <span className="text-xs sm:text-sm">View Profile</span>
+            <Link href="https://github.com/Rajeev12R" target="_blank" className="text-xs sm:text-sm">View Profile</Link>
           </button>
         </div>
 
@@ -120,19 +120,19 @@ const CodingStats = () => {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 mt-3 sm:mt-6">
           <div className="bg-gray-50 dark:bg-gray-800 p-2 sm:p-3 rounded-lg flex flex-col items-center justify-center">
             <p className="text-[10px] sm:text-xs text-gray-600 dark:text-gray-400 text-center">Total Commits</p>
-            <p className="text-sm sm:text-lg md:text-xl font-bold text-gray-900 dark:text-white">1,248</p>
+            <p className="text-sm sm:text-lg md:text-xl font-bold text-gray-900 dark:text-white">647</p>
           </div>
           <div className="bg-gray-50 dark:bg-gray-800 p-2 sm:p-3 rounded-lg flex flex-col items-center justify-center">
             <p className="text-[10px] sm:text-xs text-gray-600 dark:text-gray-400 text-center">Repositories</p>
-            <p className="text-sm sm:text-lg md:text-xl font-bold text-gray-900 dark:text-white">32</p>
+            <p className="text-sm sm:text-lg md:text-xl font-bold text-gray-900 dark:text-white">68</p>
           </div>
           <div className="bg-gray-50 dark:bg-gray-800 p-2 sm:p-3 rounded-lg flex flex-col items-center justify-center">
             <p className="text-[10px] sm:text-xs text-gray-600 dark:text-gray-400 text-center">Pull Requests</p>
-            <p className="text-sm sm:text-lg md:text-xl font-bold text-gray-900 dark:text-white">78</p>
+            <p className="text-sm sm:text-lg md:text-xl font-bold text-gray-900 dark:text-white">7</p>
           </div>
           <div className="bg-gray-50 dark:bg-gray-800 p-2 sm:p-3 rounded-lg flex flex-col items-center justify-center">
             <p className="text-[10px] sm:text-xs text-gray-600 dark:text-gray-400 text-center">Code Reviews</p>
-            <p className="text-sm sm:text-lg md:text-xl font-bold text-gray-900 dark:text-white">124</p>
+            <p className="text-sm sm:text-lg md:text-xl font-bold text-gray-900 dark:text-white">5</p>
           </div>
         </div>
       </motion.div>
