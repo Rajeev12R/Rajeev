@@ -19,7 +19,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-4/5 left-1/2 transform -translate-x-1/2 z-50 flex items-center justify-center px-6 py-4 rounded-xl transition-all duration-300
+      className={`fixed w-4/5 min-w-fit left-1/2 transform -translate-x-1/2 z-50 flex items-center justify-center px-6 py-4 rounded-xl transition-all duration-300
         ${
           isScrolled
             ? "bg-white/80 top-0 border-x border-white backdrop-blur-md shadow-md"
