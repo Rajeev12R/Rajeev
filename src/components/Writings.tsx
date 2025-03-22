@@ -83,7 +83,7 @@ const ArticleCard = ({ article }: { article: Article }) => {
     <div className="flex flex-row-reverse md:flex-row items-center md:items-start gap-6 border-b pb-6">
       <div className="flex-1">
         <h3 className="text-xl font-semibold">{article.title}</h3>
-        <p className="text-neutral-600 dark:text-neutral-300 mt-2 text-sm sm:text-base">
+        <p className="text-neutral-600 dark:text-neutral-300 mt-2 text-sm sm:text-base transition-all duration-2000">
           {showFullText ? article.description : shortText}
         </p>
         {article.description.length > 100 && (
