@@ -1,5 +1,5 @@
 import React from "react"
-
+import Image from "next/image"
 const articles = [
   {
     title: "Mastering Dynamic Theming in Tailwind CSS: A Step-by-Step Guide",
@@ -51,7 +51,7 @@ const Writings = () => {
             {articles.map((article, index) => (
               <div
                 key={index}
-                className="flex flex-col-reverse md:flex-row items-center md:items-start gap-6 border-b pb-6"
+                className="flex flex-row-reverse md:flex-row items-center md:items-start gap-6 border-b pb-6"
               >
                 <div className="flex-1">
                   <h3 className="text-xl font-semibold">{article.title}</h3>
@@ -63,9 +63,11 @@ const Writings = () => {
                   </p>
                 </div>
                 <div className="p-5">
-                  <img
+                  <Image
                     src={article.image}
                     alt="Article Thumbnail"
+                    width={120}
+                    height={120}
                     className="w-24 h-24 object-cover rounded-lg"
                   />
                 </div>

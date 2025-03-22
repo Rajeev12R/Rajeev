@@ -25,9 +25,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <>
-      <Navbar />
       <html lang="en">
+      <Navbar />
         <div className="relative w-full">
           <div className="absolute inset-0 -z-10">
             <GridBackgroundDemo />
@@ -38,8 +37,7 @@ export default function RootLayout({
         >
           {children}
         </body>
+        <Footer />
       </html>
-      <Footer />
-    </>
   )
 }
