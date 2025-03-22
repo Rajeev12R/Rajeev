@@ -75,7 +75,7 @@ const Projects = () => {
     <div className=" flex flex-col w-full">
 
       <div className="flex flex-col gap-5">
-      <div className="relative flex flex-col justify-start px-4 sm:px-10 md:px-20 max-w-7xl mx-auto flex-grow z-10">
+      <div className="relative flex flex-col justify-start px-4 sm:px-10 md:px-20  flex-grow z-10">
         <div className="flex justify-between items-center">
           <div className="flex flex-col gap-4">
             <h2 className="text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100">

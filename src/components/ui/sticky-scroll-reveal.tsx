@@ -42,11 +42,11 @@ export const StickyScroll = ({
 
   return (
     <motion.div
-      className="relative flex h-[30rem] justify-center space-x-20 overflow-y-auto rounded-md py-10 md:px-20 max-w-6xl mx-auto px-6"
+      className="relative flex h-[30rem] justify-center space-x-20 overflow-y-auto rounded-md py-10 md:px-20  px-6"
       ref={ref}
     >
       <div className="div relative flex items-start px-4">
-        <div className="max-w-6xl mx-auto w-full">
+        <div className="w-full">
           {content.map((item, index) => (
             <div key={item.title + index} className="my-20">
               <motion.h2
