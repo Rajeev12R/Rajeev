@@ -1,15 +1,6 @@
-"use client"
-import React, { useState } from "react";
-import Image from "next/image";
-
-interface Article {
-  title: string;
-  description: string;
-  date: string;
-  image: string;
-}
-
-const articles: Article[] = [
+import React from "react"
+import Image from "next/image"
+const articles = [
   {
     title: "Mastering Dynamic Theming in Tailwind CSS: A Step-by-Step Guide",
     description:
@@ -28,17 +19,18 @@ const articles: Article[] = [
   {
     title: "How to Set Up Tailwind CSS with Webpack: A Step-by-Step Guide",
     description:
-      "Transform your React project's styling workflow with this step-by-step guide to integrating Tailwind CSS with Webpack. Master the art of dynamic theming in Tailwind CSS and create adaptable, user-centric interfaces in your React application.",
+      "Transform your React project's styling workflow with this step-by-step guide to integrating Tailwind CSS with Webpack. Master the art of dynamic theming in Tailwind CSS and create adaptable, user-centric interfaces in your React application. v",
     date: "1 Feb 2024",
     image: "/globe.svg",
   },
-];
+]
 
 const Writings = () => {
   return (
     <div className="py-32 flex flex-col w-full">
       <div className="flex flex-col gap-5">
         <div className="relative flex flex-col justify-start px-4 sm:px-10 md:px-20 max-w-7xl mx-auto flex-grow z-10">
+
           <div className="flex justify-between items-center">
             <div className="flex flex-col gap-4">
               <h2 className="text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100">
@@ -57,7 +49,29 @@ const Writings = () => {
 
           <div className="mt-10 space-y-10">
             {articles.map((article, index) => (
-              <ArticleCard key={index} article={article} />
+              <div
+                key={index}
+                className="flex flex-row-reverse md:flex-row items-center md:items-start gap-6 border-b pb-6"
+              >
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold">{article.title}</h3>
+                  <p className="text-neutral-600 dark:text-neutral-300 mt-2">
+                    {article.description}
+                  </p>
+                  <p className="text-sm text-neutral-400 mt-1">
+                    {article.date}
+                  </p>
+                </div>
+                <div className="p-5">
+                  <Image
+                    src={article.image}
+                    alt="Article Thumbnail"
+                    width={120}
+                    height={120}
+                    className="w-24 h-24 object-cover rounded-lg"
+                  />
+                </div>
+              </div>
             ))}
           </div>
 
@@ -72,41 +86,7 @@ const Writings = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-const ArticleCard = ({ article }: { article: Article }) => {
-  const [showFullText, setShowFullText] = useState(false);
-  const shortText = article.description.substring(0, 100) + "...";
-
-  return (
-    <div className="flex flex-row-reverse md:flex-row items-center md:items-start gap-6 border-b pb-6">
-      <div className="flex-1">
-        <h3 className="text-xl font-semibold">{article.title}</h3>
-        <p className="text-neutral-600 dark:text-neutral-300 mt-2 text-sm sm:text-base transition-all duration-2000">
-          {showFullText ? article.description : shortText}
-        </p>
-        {article.description.length > 100 && (
-          <button
-            className="text-blue-500 text-sm mt-1 focus:outline-none"
-            onClick={() => setShowFullText(!showFullText)}
-          >
-            {showFullText ? "Show Less" : "Show More"}
-          </button>
-        )}
-        <p className="text-sm text-neutral-400 mt-1">{article.date}</p>
-      </div>
-      <div className="p-5">
-        <Image
-          src={article.image}
-          alt="Article Thumbnail"
-          width={60}
-          height={60}
-          className="object-cover rounded-lg"
-        />
-      </div>
-    </div>
-  );
-};
-
-export default Writings;
+export default Writings
