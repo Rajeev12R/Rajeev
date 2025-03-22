@@ -25,19 +25,21 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-      <html lang="en">
-      <Navbar />
-        <div className="relative w-full">
+    <>
+        <div className="relative w-full top-0">
           <div className="absolute inset-0 -z-10">
             <GridBackgroundDemo />
           </div>
         </div>
+      <html lang="en">
+      <Navbar />
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased `}
-        >
+          >
           {children}
         </body>
         <Footer />
       </html>
+          </>
   )
 }

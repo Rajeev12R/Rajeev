@@ -1,5 +1,5 @@
-import { HoverEffect } from '@/components/ui/card-hover-effect';
-import React from 'react'
+import { HoverEffect } from "@/components/ui/card-hover-effect"
+import React from "react"
 
 const projects = [
   {
@@ -80,16 +80,26 @@ const projects = [
       "A website that curates trending technology news, updates, and insights to keep users informed.",
     link: "https://techtrends.com",
   },
-];
+]
 const page = () => {
   return (
-    <div className='min-h-screen max-w-7xl mx-auto'>
+    <div className="min-h-screen max-w-7xl mx-auto">
       <div className="flex flex-col py-32 mt-10 space-y-10 px-10">
-      <div className="max-w-5xl mx-auto px-8">
-      <HoverEffect items={projects} />
+        <div className="max-w-5xl mx-auto px-8">
+        <div className="flex flex-col gap-4">
+          <h2 className="font-semibold text-3xl md:text-4xl tracking-tight">
+            My Projects
+          </h2>
+          <p className="font-light text-neutral-600 text-base md:text-lg lg:text-xl leading-relaxed tracking-wide">
+            A showcase of my work, featuring full-stack applications, fintech
+            solutions, and innovative web projects built with MERN, Next.js, and
+            modern JavaScript.
+          </p>
+          </div>
+          <HoverEffect items={projects} />
+        </div>
+      </div>
     </div>
-      </div>
-      </div>
   )
 }
 

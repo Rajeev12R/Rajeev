@@ -51,7 +51,7 @@ const Writings = () => {
             {articles.map((article, index) => (
               <div
                 key={index}
-                className="flex flex-row-reverse md:flex-row items-center md:items-start gap-6 border-b pb-6"
+                className="flex flex-col-reverse md:flex-row items-center md:items-start gap-6 border-b pb-6"
               >
                 <div className="flex-1">
                   <h3 className="text-xl font-semibold">{article.title}</h3>

@@ -116,8 +116,10 @@ const Hero = () => {
           </div>
 
           {/* Right Section (Skills / Tech Stack) */}
-          <div className="flex-1 flex justify-center lg:justify-end w-full max-w-lg">
+          <div className="flex-1 flex-col justify-center lg:justify-end w-full max-w-lg">
             <CodingStats />
+
+            <p className="text-center mt-40 text-neutral-400">UI Components Example</p>
           </div>
         </div>
       </div>
