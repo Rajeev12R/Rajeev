@@ -3,7 +3,8 @@ import React, {useRef, useState } from "react";
 import { useMotionValueEvent, useScroll } from "motion/react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
-
+import Link from "next/link";
+import { FiExternalLink } from "react-icons/fi";
 export const StickyScroll = ({
   content,
   contentClassName,
@@ -11,6 +12,7 @@ export const StickyScroll = ({
   content: {
     title: string;
     description: string;
+    link: string;
     techStack?: { icon: React.ReactNode; name: string }[];
     videoSrc: string; // Added videoSrc property for each project
     content?: React.ReactNode | any;
@@ -53,9 +55,14 @@ export const StickyScroll = ({
                 initial={{ opacity: 0 }}
                 animate={{ opacity: activeCard === index ? 1 : 0.3 }}
                 className="text-2xl font-bold text-stone-700"
-              >
-                {item.title}
+                >
+                {item.title} 
               </motion.h2>
+              <Link href={item.link} target="_blank">
+              <div className="flex gap-2 cursor-pointer hover:text-blue-600 items-center">
+                <FiExternalLink/>
+                <span>Live Demo</span>
+                </div></Link>
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: activeCard === index ? 1 : 0.3 }}

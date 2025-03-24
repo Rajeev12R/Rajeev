@@ -21,12 +21,12 @@ const Footer = () => {
         {/* Right Section */}
         <div className="flex gap-5 items-center">
 
-        <button
-          type="button"
+        <Link
+          href="/contact"
           className="border border-black dark:border-white px-6 py-2 rounded-full bg-transparent hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black cursor-pointer transition-all duration-300"
           >
           Contact Me
-        </button>
+        </Link>
         <Link href="https://github.com/rajeev12r" target="_blank"><SiGithub className="h-8 w-8"/></Link>
         <Link href="https://www.linkedin.com/in/rajeev12r" target="_blank"><SiLinkedin className="h-8 w-8"/></Link>
         <Link href="https://x.com/RajeevR16816742" target="_blank"><FaSquareXTwitter className="h-8 w-8"/></Link>

@@ -1,4 +1,5 @@
 import React from "react"
+import Link from "next/link"
 import { StickyScroll } from "./ui/sticky-scroll-reveal"
 import Image from "next/image"
 import {
@@ -14,6 +15,7 @@ const content = [
   {
     title: "King Chess - Real-Time Chess Game",
     description: "Built a real-time multiplayer chess app with smooth synchronization, move validation, and an intuitive UI. Used WebSockets for seamless gameplay, allowing players to join via room codes and track move history.",
+    link: "https://kingchess.vercel.app",
     techStack: [
       { icon: <SiReact title="React.js" />, name: "React.js" },
       { icon: <DiNodejs title="Node.js" />, name: "Node.js" },
@@ -25,11 +27,13 @@ const content = [
       <div className="flex h-full w-full items-center justify-center text-white bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] p-6 rounded-md">
         Buzz 2.0 - Chat App
       </div>
+
     ),
   },
   {
     title: "Wide Take - Marketing Agency Website",
     description: "Built a sleek and responsive marketing agency website with interactive animations, SEO optimization, and a blog section. Ensured an engaging UI using React.js and Tailwind CSS.",
+    link: "https://widetake.vercel.app",
     techStack: [
       { icon: <SiReact title="React.js" />, name: "React.js" },
       { icon: <DiNodejs title="Node.js" />, name: "Node.js" },
@@ -52,6 +56,7 @@ const content = [
   {
     title: "CampusStay - Hostel/PG Booking Platform",
     description: "A full-stack PG booking platform with secure payments.",
+    link: "https://campusstay.vercel.app",
     techStack: [
       { icon: <SiReact title="React.js" />, name: "React.js" },
       { icon: <DiNodejs title="Node.js" />, name: "Node.js" },
@@ -97,10 +102,11 @@ const Projects = () => {
         <StickyScroll content={content} contentClassName="text-black" />
       </div>
         <button
+        
           type="button"
           className="border border-black px-6 py-2 rounded-full bg-transparent hover:bg-black hover:text-white cursor-pointer transition-all duration-500 max-w-fit mx-auto"
           >
-          Explore More Projects
+          <Link href="/projects">Explore More Projects</Link>
         </button>
       </div>
 

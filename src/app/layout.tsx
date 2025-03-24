@@ -31,15 +31,15 @@ export default function RootLayout({
             <GridBackgroundDemo />
           </div>
         </div>
+        <Navbar />
       <html lang="en">
-      <Navbar />
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased `}
           >
           {children}
         </body>
-        <Footer />
       </html>
+        <Footer />
           </>
   )
 }

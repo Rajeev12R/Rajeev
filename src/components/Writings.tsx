@@ -1,5 +1,6 @@
 import React from "react"
 import Image from "next/image"
+import Link from "next/link"
 const articles = [
   {
     title: "Mastering Dynamic Theming in Tailwind CSS: A Step-by-Step Guide",
@@ -80,7 +81,7 @@ const Writings = () => {
               type="button"
               className="border border-black px-6 py-2 rounded-full bg-transparent hover:bg-black hover:text-white cursor-pointer transition-all duration-500 max-w-fit mx-auto"
             >
-              View All Articles
+             <Link href="/blogs">View All Articles</Link> 
             </button>
           </div>
         </div>

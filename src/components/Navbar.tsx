@@ -18,7 +18,7 @@ const Navbar = () => {
   }, [])
 
   return (
-    <nav
+    <div
       className={`fixed w-4/5 min-w-fit left-1/2 transform -translate-x-1/2 z-50 flex items-center justify-center px-6 py-4 rounded-xl transition-all duration-300
         ${
           isScrolled
@@ -57,7 +57,7 @@ const Navbar = () => {
         </ul>
         </div>
       </div>
-    </nav>
+    </div>
   )
 }
 
