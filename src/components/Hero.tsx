@@ -2,15 +2,42 @@
 import React, { useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { FaLinkedin, FaGithub } from "react-icons/fa"
+import { FaLinkedin, FaGithub, FaTimes } from "react-icons/fa"
 import { FaSquareXTwitter } from "react-icons/fa6"
 import CodingStats from "./tech-stack"
 
 const Hero = () => {
   const [hovered, setHovered] = useState(false)
+  const [showResume, setShowResume] = useState(false)
 
   return (
     <div className="relative text-stone-600 flex flex-col min-h-screen w-full">
+      {/* Resume Modal */}
+      {showResume && (
+        <div className="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl w-full max-w-4xl h-[90vh]"
+          >
+            <button 
+              onClick={() => setShowResume(false)}
+              className="absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors"
+            >
+              <FaTimes className="text-2xl" />
+            </button>
+            
+            <iframe 
+              src="/RajeevResume2.pdf" 
+              className="w-full h-full rounded-lg"
+            >
+              Your browser does not support PDFs. 
+              <a href="/resume.pdf">Download the resume</a> instead.
+            </iframe>
+          </motion.div>
+        </div>
+      )}
+
       <div className="relative flex flex-col justify-center px-4 sm:px-10 md:px-20 w-full mx-auto flex-grow z-10 py-44">
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between w-full gap-10 lg:gap-20">
           
@@ -108,6 +135,7 @@ const Hero = () => {
             <div className="flex gap-5 justify-center sm:justify-start">
               <button
                 type="button"
+                onClick={() => setShowResume(true)}
                 className="border border-black px-6 py-2 rounded-full bg-transparent hover:bg-black hover:text-white cursor-pointer transition-all duration-500"
               >
                 View Resume
