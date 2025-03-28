@@ -13,6 +13,9 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  experimental: {
+    // turbopack property removed as it is not valid
+  },
 };
 
 export default nextConfig;

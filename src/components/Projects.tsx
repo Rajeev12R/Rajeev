@@ -8,6 +8,8 @@ import {
   SiTailwindcss,
   SiFramer,
   SiFirebase,
+  SiHuggingface,
+  SiPython
 } from "react-icons/si"
 import { DiNodejs } from "react-icons/di"
 
@@ -54,19 +56,43 @@ const content = [
     ),
   },
   {
-    title: "CampusStay - Hostel/PG Booking Platform",
-    description: "A full-stack PG booking platform with secure payments.",
-    link: "https://campusstay.vercel.app",
+    title: "LegalEase- AI Legal Document Summarizer",
+    description: "Developed an AI-powered legal document summarizer that extracts key information, generates summaries, and highlights critical sections. Used Hugging Face NLP and ML algorithms to analyze legal texts and provide concise summaries.",
+    link: "https://widetake.vercel.app",
+    techStack: [
+      { icon: <SiReact title="React.js" />, name: "React.js" },
+      { icon: <DiNodejs title="Node.js" />, name: "Node.js" },
+      { icon: <SiTailwindcss title="Tailwind CSS" />, name: "Tailwind CSS" },
+      { icon: <SiPython title="Python" />, name: "Python" },
+      { icon: <SiHuggingface title="Hugging Face" />, name: "Hugging Face" },
+    ],
+    videoSrc: "/legalease.mp4", 
+    content: (
+      <div className="flex h-full w-full items-center justify-center text-black p-6 rounded-md">
+        <Image
+          src="/wide-take.webp"
+          width={300}
+          height={300}
+          className="h-full w-full object-cover rounded-md"
+          alt="Marketing Agency Website"
+        />
+      </div>
+    ),
+  },
+  {
+    title: "Buzz - Real-Time Chat App",
+    description: "Real Time Chat App with multiple rooms, user authentication, and message history. Used WebSocket-Socket.io for real-time updates, user authentication, and message storage.",
+    link: "https://buzz",
     techStack: [
       { icon: <SiReact title="React.js" />, name: "React.js" },
       { icon: <DiNodejs title="Node.js" />, name: "Node.js" },
       { icon: <SiMongodb title="MongoDB" />, name: "MongoDB" },
-      {
-        icon: <SiFirebase title="Firebase Payments" />,
-        name: "Firebase Payments",
-      },
+      // {
+      //   icon: <SiFirebase title="Firebase Payments" />,
+      //   name: "Firebase Payments",
+      // },
     ],
-    videoSrc: "/campusstay-video.mp4", 
+    videoSrc: "/buzz.mp4", 
     content: (
       <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] text-black p-6 rounded-md">
         CampusStay - Booking Platform
