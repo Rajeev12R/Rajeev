@@ -9,7 +9,8 @@ import {
   SiFramer,
   SiFirebase,
   SiHuggingface,
-  SiPython
+  SiPython,
+  SiSocketdotio
 } from "react-icons/si"
 import { DiNodejs } from "react-icons/di"
 
@@ -87,6 +88,7 @@ const content = [
       { icon: <SiReact title="React.js" />, name: "React.js" },
       { icon: <DiNodejs title="Node.js" />, name: "Node.js" },
       { icon: <SiMongodb title="MongoDB" />, name: "MongoDB" },
+      { icon: <SiSocketdotio title="Socketio" />, name: "Socket.io" },
       // {
       //   icon: <SiFirebase title="Firebase Payments" />,
       //   name: "Firebase Payments",
