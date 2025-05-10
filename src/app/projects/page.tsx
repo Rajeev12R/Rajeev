@@ -3,82 +3,64 @@ import React from "react"
 
 const projects = [
   {
-    title: "WeSell",
+    title: "CampusStay",
     description:
-      "A platform for students to buy and sell old items on the college campus, including gadgets, furniture, and more.",
-    link: "https://wesell.com",
-  },
-  {
-    title: "Campus Stay",
-    description:
-      "A website that helps students find accommodation and facilities near their college, making student life easier.",
+      "A full-featured MERN stack platform to discover the best PGs and hostels, complete with an advanced admin dashboard and integrated payment gateway for seamless bookings.",
     link: "https://campusstay.com",
   },
   {
-    title: "Fintech Platform",
+    title: "Chess Game",
     description:
-      "A financial services platform with advanced features built using the MERN stack, aiming to simplify digital transactions.",
-    link: "https://fintechplatform.com",
+      "A real-time multiplayer chess game built with the MERN stack and Socket.io, enabling seamless gameplay and instant move synchronization between players.",
+    link: "https://kingchess.vercel.app",
   },
   {
-    title: "Fraud Alert App",
+    title: "Marketing Website Portfolio",
     description:
-      "A React Native app where users can report and discuss fraud calls, messages, and emails to help prevent scams.",
-    link: "https://fraudalertapp.com",
+      "A modern, responsive portfolio and marketing website built with React and MUI, featuring beautiful UI, interactive forms powered by Nodemailer, and a focus on frontend excellence.",
+    link: "https://widetake.vercel.app",
   },
   {
-    title: "Cricket Website",
+    title: "Real Time Chat Application",
     description:
-      "A website providing live scores, highlights, articles, and player stats for cricket enthusiasts.",
-    link: "https://cricketlive.com",
+      "A feature-rich MERN chat app with DaisyUI, great UI, real-time messaging via Socket.io, and video calls using WebRTC for seamless communication.",
+    link: "https://buzz",
   },
   {
-    title: "Online Hospital",
+    title: "Mental Health Chatbot",
     description:
-      "A telemedicine platform that allows patients to book appointments, consult doctors via video calls, and get medical assistance.",
-    link: "https://onlinehospital.com",
-  },
-  {
-    title: "AI Chatbot",
-    description:
-      "An AI-powered chatbot that interacts with users, provides recommendations, and assists with various inquiries.",
-    link: "https://aichatbot.com",
+      "A MERN-based mental health chatbot powered by Gemini API, visualizing user progress with Chart.js and providing supportive, AI-driven conversations.",
+    link: "#",
   },
   {
     title: "Smart Learning Dashboard",
     description:
-      "A personalized learning platform with reading statistics, progress tracking, and AI-driven learning paths.",
+      "A MERN-based smart learning dashboard that uses web scraping for personalized learning, offers clear roadmaps, and makes the learning journey easy and effective.",
     link: "https://smartlearning.com",
   },
   {
-    title: "Salon Management System",
+    title: "Task Manager",
     description:
-      "A system where clients can generate appointment tokens, and barbers can efficiently manage their queue.",
-    link: "https://salonmanage.com",
+      "A college project task manager built with PHP, HTML, CSS, JS, and CDN Tailwind, enabling students to efficiently organize and track their assignments.",
+    link: "#",
   },
   {
-    title: "Restaurant QR Menu",
+    title: "AI Powered Image Generator",
     description:
-      "A QR-based restaurant menu where customers can view items, order, pay online, and notify the restaurant instantly.",
-    link: "https://restaurantqrcode.com",
+      "An AI-powered image generator using OpenAI API, allowing users to generate images from prompts with a pricing-based model.",
+    link: "#",
   },
   {
-    title: "Family Task Manager",
+    title: "AI powered legal Case Summarizer",
     description:
-      "A collaborative family task management app to assign, track, and complete household chores efficiently.",
-    link: "https://familytasks.com",
+      "A MERN-based legal case summarizer with voice assistance, speech features, and advanced NLP (NLTK) for tokenizing, removing stopwords, and generating perfect summaries from PDF, DOCX, and images.",
+    link: "#",
   },
   {
-    title: "Omegle Alternative",
+    title: "AI Powered Process Anomoly Detector",
     description:
-      "A real-time anonymous chat platform that connects users randomly for conversations and social interactions.",
-    link: "https://omeglealt.com",
-  },
-  {
-    title: "Trending Tech Aggregator",
-    description:
-      "A website that curates trending technology news, updates, and insights to keep users informed.",
-    link: "https://techtrends.com",
+      "A college operations system project that monitors and manages processes using htop and pslist in the backend, with a React-based advanced UI for real-time CPU and memory monitoring and process control.",
+    link: "#",
   },
 ]
 const page = () => {
@@ -86,15 +68,15 @@ const page = () => {
     <div className="min-h-screen max-w-7xl mx-auto">
       <div className="flex flex-col py-32 mt-10 space-y-10 px-10">
         <div className="max-w-5xl mx-auto px-8">
-        <div className="flex flex-col gap-4">
-          <h2 className="font-semibold text-3xl md:text-4xl tracking-tight">
-            My Projects
-          </h2>
-          <p className="font-light text-neutral-600 text-base md:text-lg lg:text-xl leading-relaxed tracking-wide">
-            A showcase of my work, featuring full-stack applications, fintech
-            solutions, and innovative web projects built with MERN, Next.js, and
-            modern JavaScript.
-          </p>
+          <div className="flex flex-col gap-4">
+            <h2 className="font-semibold text-3xl md:text-4xl tracking-tight">
+              My Projects
+            </h2>
+            <p className="font-light text-neutral-600 text-base md:text-lg lg:text-xl leading-relaxed tracking-wide">
+              A showcase of my work, featuring full-stack applications, fintech
+              solutions, and innovative web projects built with MERN, Next.js,
+              and modern JavaScript.
+            </p>
           </div>
           <HoverEffect items={projects} />
         </div>
