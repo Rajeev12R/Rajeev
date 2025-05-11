@@ -65,9 +65,9 @@ const projects = [
 ]
 const page = () => {
   return (
-    <div className="min-h-screen max-w-7xl mx-auto">
-      <div className="flex flex-col py-32 mt-10 space-y-10 px-10">
-        <div className="max-w-5xl mx-auto px-8">
+    <div className="min-h-screen max-w-7xl mx-auto w-full px-4 sm:px-6 md:px-10 pt-28">
+      <div className="flex flex-col space-y-10">
+        <div className="max-w-5xl mx-auto px-0">
           <div className="flex flex-col gap-4">
             <h2 className="font-semibold text-3xl md:text-4xl tracking-tight">
               My Projects

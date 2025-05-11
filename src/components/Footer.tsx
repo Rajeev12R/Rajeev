@@ -19,11 +19,11 @@ const Footer = () => {
         </div>
 
         {/* Right Section */}
-        <div className="flex gap-5 items-center">
+        <div className="flex gap-5 items-center px-6 py-4">
 
         <Link
           href="/contact"
-          className="border border-black dark:border-white px-6 py-2 rounded-full bg-transparent hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black cursor-pointer transition-all duration-300"
+          className="border border-black dark:border-white px-6 py-2 text-sm rounded-full bg-transparent hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black cursor-pointer transition-all duration-300"
           >
           Contact Me
         </Link>

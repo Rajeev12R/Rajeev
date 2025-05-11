@@ -48,7 +48,7 @@ const Hero = () => {
               onMouseEnter={() => setHovered(true)}
               onMouseLeave={() => setHovered(false)}
             >
-              {/* <motion.div
+              <motion.div
                 whileHover={{ scale: 1.1 }}
                 transition={{ type: "spring", stiffness: 200 }}
                 className="relative"
@@ -60,7 +60,7 @@ const Hero = () => {
                   height={120}
                   className="w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-full border border-gray-300 dark:border-gray-600 shadow-md"
                 />
-              </motion.div> */}
+              </motion.div>
 
               {hovered && (
                 <motion.div
@@ -156,3 +156,4 @@ const Hero = () => {
 }
 
 export default Hero
+

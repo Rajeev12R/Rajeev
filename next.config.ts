@@ -12,6 +12,9 @@ const nextConfig: NextConfig = {
         hostname: "aceternity.com",
       },
     ],
+    domains: [
+      "go.forrester.com", // add any other domains you use for images
+    ],
   },
   experimental: {
     // turbopack property removed as it is not valid
